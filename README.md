@@ -8,9 +8,9 @@
 py -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
-$env:SAS_API_KEY = "ضع-مفتاحا-طويلا-هنا"
+$env:SAS_API_KEY = "sk_live_98a7sd98a7sd98a7sd98a7sd"
 $env:SAS_ADMIN_USERNAME = "admin"
-$env:SAS_ADMIN_PASSWORD = "غيّر-كلمة-المرور-هنا"
+$env:SAS_ADMIN_PASSWORD = "iraqiraq"
 $env:SAS_PUBLIC_HOST = "166.122.177.1" # استخدمه فقط إذا كان هذا IP للاستضافة
 uvicorn SAS-4:app --host 0.0.0.0 --port 8000
 ```
@@ -54,7 +54,7 @@ Invoke-RestMethod -Method Post -Uri http://127.0.0.1:8000/nas -Headers $headers 
 ## إضافة مستخدم
 
 ```powershell
-$headers = @{ "X-API-Key" = "ضع-مفتاحا-طويلا-هنا" }
+$headers = @{ "X-API-Key" = "sk_live_98a7sd98a7sd98a7sd98a7sd" }
 $body = @{ username = "user1"; password = "StrongPassword!123" } | ConvertTo-Json
 Invoke-RestMethod -Method Post -Uri http://127.0.0.1:8000/users -Headers $headers -ContentType "application/json" -Body $body
 ```
